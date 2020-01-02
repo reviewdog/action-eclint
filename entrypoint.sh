@@ -13,6 +13,5 @@ TARGET_FOLDER=$(mktemp -d -t reviewdog-eclint-XXXXXXXXXX)
 
 JENKINS_URL=1 BUILD_ID=1 CI_REPORTS="$TARGET_FOLDER" \
   eclint check ${INPUT_ECLINT_FLAGS:-'.'} 2>/dev/null || \
-    cat "$TARGET_FOLDER/*/checkstyle-result.xml" 2>/dev/null || \
-    echo '<checkstyle></checkstyle>' | \
+    (cat "$TARGET_FOLDER/*/checkstyle-result.xml" 2>/dev/null || echo '<checkstyle></checkstyle>') | \
       reviewdog -f=checkstyle -name="eclint" -reporter="${INPUT_REPORTER:-github-pr-check}" -level="${INPUT_LEVEL}"
