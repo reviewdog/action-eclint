@@ -1,0 +1,25 @@
+name: 'Run eclint with reviewdog'
+description: '🐶 Run eclint with reviewdog on pull requests to improve code review experience.'
+author: 'aslafy-z'
+inputs:
+  github_token:
+    description: 'GITHUB_TOKEN.'
+    required: true
+  level:
+    description: 'Report level for reviewdog [info,warning,error]'
+    default: 'error'
+  reporter:
+    description: |
+      Reporter of reviewdog command [github-pr-check,github-pr-review].
+      Default is github-pr-check.
+      github-pr-review can use Markdown and add a link to rule page in reviewdog reports.
+    default: 'github-pr-check'
+  eclint_flags:
+    description: "flags and args of yamllint command. Default: '.'"
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'alert-octagon'
+  color: 'blue'
