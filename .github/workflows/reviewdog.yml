@@ -9,19 +9,16 @@ jobs:
       - name: eclint-github-pr-check
         uses: ./
         with:
-          github_token: ${{ secrets.github_token }}
           reporter: github-pr-check
           eclint_flags: 'testdata/'
       - name: eclint-github-check
         uses: ./
         with:
-          github_token: ${{ secrets.github_token }}
           reporter: github-check
           level: warning
           eclint_flags: 'testdata/'
       - name: eclint-github-pr-review
         uses: ./
         with:
-          github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
           eclint_flags: 'testdata/'
