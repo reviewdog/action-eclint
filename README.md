@@ -14,7 +14,7 @@ code review experience.
 
 ### `github_token`
 
-**Required**. Must be in form of `github_token: ${{ secrets.github_token }}`'.
+**Required**. The default value is `github_token: ${{ github.token }}`'.
 
 ### `level`
 
