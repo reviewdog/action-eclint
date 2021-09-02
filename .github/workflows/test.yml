@@ -1,0 +1,24 @@
+name: reviewdog
+on: [pull_request]
+jobs:
+  eclint:
+    name: runner / eclint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: eclint-github-pr-check
+        uses: ./
+        with:
+          reporter: github-pr-check
+          eclint_flags: 'testdata/'
+      - name: eclint-github-check
+        uses: ./
+        with:
+          reporter: github-check
+          level: warning
+          eclint_flags: 'testdata/'
+      - name: eclint-github-pr-review
+        uses: ./
+        with:
+          reporter: github-pr-review
+          eclint_flags: 'testdata/'
