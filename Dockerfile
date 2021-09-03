@@ -1,7 +1,10 @@
 FROM node:current-alpine
 
-RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ v0.9.14
+ENV REVIEWDOG_VERSION=v0.13.0
+
 RUN apk --no-cache add git
+
+RUN wget -O - -q https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh| sh -s -- -b /usr/local/bin/ ${REVIEWDOG_VERSION}
 
 RUN npm install -g eclint
 
