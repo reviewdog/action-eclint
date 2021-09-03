@@ -1,7 +1,7 @@
 # GitHub Action: Run eclint with reviewdog
 
 [![Docker Image CI](https://github.com/reviewdog/action-eclint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/reviewdog/action-eclint/actions)
-[![Release](https://img.shields.io/github/release/reviewdog/action-eclint.svg?maxAge=43200)](https://github.com/reviewdog/action-eclint/releases)
+[![Release](https://img.shields.io/github/release/reviewdog/action-eclint?sort=semver)](https://github.com/reviewdog/action-eclint/releases)
 
 This action runs [eclint](https://github.com/jedmao/eclint) with
 [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to improve
