@@ -5,7 +5,7 @@ jobs:
     name: runner / eclint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: eclint-github-pr-check
         uses: ./
         with:
