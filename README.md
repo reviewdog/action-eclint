@@ -47,7 +47,7 @@ jobs:
     name: runner / eclint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: eclint
         uses: reviewdog/action-eclint@v1
         with:
