@@ -1,6 +1,6 @@
 FROM node:current-alpine
 
-ENV REVIEWDOG_VERSION=v0.17.5
+ENV REVIEWDOG_VERSION=v0.18.0
 
 RUN apk --no-cache add git
 
