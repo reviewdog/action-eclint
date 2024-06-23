@@ -2,8 +2,6 @@ FROM node:current-alpine
 
 ENV REVIEWDOG_VERSION=v0.18.1
 
-RUN echo "::warning::reviewdog/action-eclint is no longer maintained. Please use another action. See https://github.com/reviewdog/action-eclint/issues/29"
-
 RUN apk --no-cache add git
 
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
