@@ -1,3 +1,8 @@
+# WARNING
+
+reviewdog/action-eclint is no longer maintained.
+Please use another action. See https://github.com/reviewdog/action-eclint/issues/29
+
 # GitHub Action: Run eclint with reviewdog
 
 [![Docker Image CI](https://github.com/reviewdog/action-eclint/workflows/Docker%20Image%20CI/badge.svg)](https://github.com/reviewdog/action-eclint/actions)
