@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "::warning::reviewdog/action-eclint is no longer maintained. Please use another action. See https://github.com/reviewdog/action-eclint/issues/29"
+
 if [ -n "${GITHUB_WORKSPACE}" ]; then
   git config --global --add safe.directory "${GITHUB_WORKSPACE}" || exit
   cd "${GITHUB_WORKSPACE}" || exit
